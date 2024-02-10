@@ -19,6 +19,7 @@ client.on('ready', () => {
   console.log('BOT ready');
 })
 
+// message controller
 client.on('messageCreate', messageController)
 
 client.login(process.env.DISCORD_BOT_TOKEN)

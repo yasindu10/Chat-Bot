@@ -25,7 +25,6 @@ const askQuesction = async (question) => {
 
 const getResponce = async (threadId, runId) => {
     let runStatus = await openai.beta.threads.runs.retrieve(threadId, runId)
-
     const resultObject = { isCompleted: false }
 
     if (runStatus.status === "completed") {
