@@ -14,12 +14,11 @@ const askQuesction = async (question) => {
         role: "user",
         content: question,
     });
-
+    
     const run = await openai.beta.threads.runs.create(thread.id, {
         assistant_id: assistant.id,
         instructions: `answer the question`,
     });
-
     return { thread: thread.id, run: run.id }
 }
 
